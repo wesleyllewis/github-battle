@@ -1,10 +1,13 @@
 {
   "name": "github-battle",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project for React Training's fundamental course",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "build": "NODE_ENV='production' webpack -p",
+    "firebase-init": "firebase login && firebase init",
+    "deploy": "npm run build && firebase deploy"
   },
   "babel": {
     "presets": [
@@ -12,7 +15,7 @@
       "react"
     ]
   },
-  "author": "",
+  "author": "Wesley Lewis",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.1",
